@@ -52,5 +52,9 @@
         "temp/":true,
         "Temp/":true
     },
-    "cSpell.language": "en,pt-BR"
+    "cSpell.language": "en,pt-BR",
+    "cSpell.words": [
+        "Behaviour",
+        "Buildable"
+    ]
 }
