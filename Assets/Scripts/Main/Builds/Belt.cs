@@ -2,16 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using CodeMonkey.Utils;
-public class Belt : IBuildable
+public class Belt : Buildable
 {
-    public bool IsPlace;
-
     public override void Move()
     {
         if(IsPlace) return;
         int x, y;
         GetXY(UtilsClass.GetMouseWorldPosition(),out x,out y);
-        transform.position = new Vector3(x, y);
+        transform.position = Vector3.Lerp(transform.position, new Vector3(x, y), .25f);
         if(Input.GetMouseButton(0)) Place();
     }
 
