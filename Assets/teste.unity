@@ -472,7 +472,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6aeabc1e4107dc946beea90b80ccf419, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  placedObjectTypeSOList: []
+  placedObjectTypeSOList:
+  - {fileID: 11400000, guid: ccc4ff4598a6b1f47a2d42fa15f0b8d9, type: 2}
   dir: 0
 --- !u!4 &1455885266
 Transform:
