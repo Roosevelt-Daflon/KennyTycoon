@@ -6,11 +6,14 @@ public class GridBuildingSystem : MonoBehaviour
 {
     [SerializeField] List<PlacedObjectTypeSO> placedObjectTypeSOList;
     PlacedObjectTypeSO placedObjectTypeSO;
-    Grid<GridObject> grid;
+    public Grid<GridObject> grid;
     [SerializeField] PlacedObjectTypeSO.Dir dir = PlacedObjectTypeSO.Dir.Down;
+
+    public static GridBuildingSystem Instance;
     private void Awake() {
-        int gridWight = 10;
-        int gridHeight = 10;
+        Instance = this;
+        int gridWight = 50;
+        int gridHeight = 50;
         float cellSize = 1;
         grid = new Grid<GridObject>(gridWight, gridHeight, cellSize, Vector3.zero, (Grid<GridObject> g, int x, int y) => new GridObject(g, x, y));
         placedObjectTypeSO = placedObjectTypeSOList[0];
